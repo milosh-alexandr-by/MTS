@@ -7,6 +7,7 @@ public class Person {
     private Long personId;
     private String name;
     private String surname;
+    private int age;
 
     public Person() {
 
@@ -21,6 +22,13 @@ public class Person {
         this.personId = personId;
         this.name = name;
         this.surname = surname;
+    }
+
+    public Person(Long personId, String name, String surname, int age){
+        this.personId = personId;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 
     public Long getPersonId() {
@@ -45,5 +53,13 @@ public class Person {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
