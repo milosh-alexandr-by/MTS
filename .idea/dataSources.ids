@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ii@localhost" uuid="da587e0f-786d-491d-8874-65c4453e3406">
+    <database-info product="MySQL" version="5.5.5-10.1.13-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="ii"/>
+    <table name="article" schema="" catalog="ii" type="TABLE">
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FKD458CCF6EEF0348A" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="id" unique="true" columns="id"/>
+      <index name="FKD458CCF6EEF0348A" unique="false" columns="uri"/>
+    </table>
+    <table name="article_seq" schema="" catalog="ii" type="TABLE">
+      <column name="seq" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="seq"/>
+    </table>
+    <table name="cache" schema="" catalog="ii" type="TABLE">
+      <column name="uid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="uid"/>
+    </table>
+    <table name="category" schema="" catalog="ii" type="TABLE">
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="end" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="next" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="parent" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="start" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_hlubcw0im0sqeoi5e217twp17" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="UK_46ccwnsi9409t36lurvtyljak" unique="true" columns="name"/>
+      <index name="FK_hlubcw0im0sqeoi5e217twp17" unique="false" columns="uri"/>
+    </table>
+    <table name="document" schema="" catalog="ii" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="download_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="icon" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mime_type" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="thumbnail" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="annotation" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_fwx4sysvwjqlm7dc09atnnrqk" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="UK_5f5rxv90kw86fqiuk1c9ijybn" unique="true" columns="id"/>
+    </table>
+    <table name="document_seq" schema="" catalog="ii" type="TABLE">
+      <column name="seq" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="seq"/>
+    </table>
+    <table name="item" schema="" catalog="ii" type="TABLE">
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="next" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="footnote" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="wiki" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="order_index" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="tagged_content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK317B13EEF0348A" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK317B13EF0E30F8" columns="next" ref-table="item" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK317B13EF0E30F8" table="item" schema="" catalog="ii" columns="next"/>
+      <index name="number" unique="true" columns="number"/>
+      <index name="FK317B13EEF0348A" unique="false" columns="uri"/>
+      <index name="FK317B13EF0E30F8" unique="false" columns="next"/>
+      <index name="order_index" unique="false" columns="order_index"/>
+    </table>
+    <table name="items_range" schema="" catalog="ii" type="TABLE">
+      <column name="code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="from" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="to" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_94xpjouvvkjctov2qtg0oexlr" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="UK_ba5u8w0o54qam6b18aak7oc8g" unique="true" columns="code"/>
+    </table>
+    <table name="items_range_seq" schema="" catalog="ii" type="TABLE">
+      <column name="seq" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="seq"/>
+    </table>
+    <table name="link" schema="" catalog="ii" type="TABLE">
+      <column name="link_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="uid1" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uid2" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="quote" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="weight" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="note" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="source" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tagged_quote" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="rate" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="uid1_uri" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uid2_uri" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="comment" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="link_id"/>
+      <foreign-key name="FK32AFFAEF2534FF1" columns="uid1" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK32AFFAEF2535001" columns="uid2" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_7dm01jlb6rdnnyydbcsjkujq9" columns="uid2_uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_9uhwx2395bj0l3mjdg4ror5h1" columns="uid1_uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK32AFFAEF2534FF1" unique="false" columns="uid1"/>
+      <index name="FK32AFFAEF2535001" unique="false" columns="uid2"/>
+      <index name="FK_7dm01jlb6rdnnyydbcsjkujq9" unique="false" columns="uid2_uri"/>
+      <index name="FK_9uhwx2395bj0l3mjdg4ror5h1" unique="false" columns="uid1_uri"/>
+    </table>
+    <table name="pending_action" schema="" catalog="ii" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="action" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="command" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="confirmed_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="confirmed_by" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="initiated_by" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="message" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="resource" schema="" catalog="ii" type="TABLE">
+      <column name="comments" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_jibf719yrdi2kraf2a4dalsvg" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_jibf719yrdi2kraf2a4dalsvg" unique="false" columns="uri"/>
+    </table>
+    <table name="song" schema="" catalog="ii" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="info" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sync_status" schema="" catalog="ii" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="article_content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="article_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="sync_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="synchronised" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="UK_t8n5rkw95nfuhofkcptxibyes" unique="true" columns="article_name"/>
+    </table>
+    <table name="system_event" schema="" catalog="ii" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="message" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="action" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="command" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="confirmed_by_user" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="term" schema="" catalog="ii" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="short_description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tagged_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="tagged_short_description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK36446CEEF0348A" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="FK36446CEEF0348A" unique="false" columns="uri"/>
+    </table>
+    <table name="term_morph" schema="" catalog="ii" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="term_uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="name"/>
+      <foreign-key name="term_uri" columns="term_uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="URI" unique="false" columns="term_uri"/>
+    </table>
+    <table name="topic" schema="" catalog="ii" type="TABLE">
+      <column name="lang" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_f58hem4rywsd0ww36lynqhrpu" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="UK_mbunn9erv8nmf5lk1r2nu0nex" unique="true" columns="name"/>
+      <index name="FK_f58hem4rywsd0ww36lynqhrpu" unique="false" columns="uri"/>
+    </table>
+    <table name="translation" schema="" catalog="ii" type="TABLE">
+      <column name="origin" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lang" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="translated" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="origin"/>
+    </table>
+    <table name="uid" schema="" catalog="ii" type="TABLE">
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <exported-key name="FKD458CCF6EEF0348A" table="article" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK_hlubcw0im0sqeoi5e217twp17" table="category" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK_fwx4sysvwjqlm7dc09atnnrqk" table="document" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK317B13EEF0348A" table="item" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK_94xpjouvvkjctov2qtg0oexlr" table="items_range" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK32AFFAEF2534FF1" table="link" schema="" catalog="ii" columns="uid1"/>
+      <exported-key name="FK32AFFAEF2535001" table="link" schema="" catalog="ii" columns="uid2"/>
+      <exported-key name="FK_7dm01jlb6rdnnyydbcsjkujq9" table="link" schema="" catalog="ii" columns="uid2_uri"/>
+      <exported-key name="FK_9uhwx2395bj0l3mjdg4ror5h1" table="link" schema="" catalog="ii" columns="uid1_uri"/>
+      <exported-key name="FK_jibf719yrdi2kraf2a4dalsvg" table="resource" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK36446CEEF0348A" table="term" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="term_uri" table="term_morph" schema="" catalog="ii" columns="term_uri"/>
+      <exported-key name="FK_f58hem4rywsd0ww36lynqhrpu" table="topic" schema="" catalog="ii" columns="uri"/>
+      <exported-key name="FK_doanhjboijbsdh3q7mfgsw17h" table="video_resource" schema="" catalog="ii" columns="uri"/>
+    </table>
+    <table name="user" schema="" catalog="ii" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="access_token" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="oauth_provider" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="picture" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="provider_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="role" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="thumbnail" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="timezone" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last_visit_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="video_resource" schema="" catalog="ii" type="TABLE">
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="published_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lang" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_by" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="uri"/>
+      <foreign-key name="FK_doanhjboijbsdh3q7mfgsw17h" columns="uri" ref-table="uid" ref-schema="" ref-catalog="ii" ref-columns="uri" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="UK_jwyi0l99vubtybxf17tcl0bgl" unique="true" columns="id"/>
+      <index name="FK_doanhjboijbsdh3q7mfgsw17h" unique="false" columns="uri"/>
+    </table>
+  </data-source>
+</component>

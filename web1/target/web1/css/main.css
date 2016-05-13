@@ -1,0 +1,207 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+html{
+	height: 98%;
+}
+hr{
+	display: block;
+    border: 0px;
+    height: 1px;
+    border-top: 1px solid #ccc;	
+	padding: 0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+    background: #F7F7F7;
+	font-size: 1em;
+	font-family: "Times";
+	line-height: 135%;
+}
+header{
+	width: 960px;
+	background-color: #FFF;
+	min-height: 70px;
+	margin: 0px auto;
+	border-top: 2px solid silver;
+    border-bottom: 2px solid silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;
+    margin-top: 20px;
+	border-radius: 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px; 	
+}
+#main{
+	width: 960px;
+	background-color: #FFF;
+	border-top: 2px solid silver;
+    border-bottom: 2px solid silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;
+	border-radius: 10px;
+    padding: 0%;
+	margin: 0px auto;
+	margin-top: 10px;
+	min-height: 770px;
+}
+
+
+/* Стили для футера */
+footer{
+	width: 960px;
+	background-color: #FFF;
+	min-height: 70px;
+	margin: 0px auto;
+    margin-bottom: 10px;
+	border-top: 2px solid silver;
+	border-bottom: 2px solid silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;	
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 0%; 
+}
+#page-wrap{
+	min-height: 89%;
+	margin-bottom: -10px;
+}
+#page-wrap:after{
+	content: "";
+	display: block;
+}
+footer, #page-wrap:after{
+	height: 10px;
+}
+a{
+	color: #03F;
+	text-decoration: none;
+}
+a:hover{
+	color: #FF6161;
+	text-decoration: underline;
+}
+a:active{
+	color: #284361;
+}
+
+/* Стили для статей */
+#wrapper{
+	width: 100%;
+	color: #4F1066;
+	background-color: #4F1066;	
+	margin-top: 200px;
+}
+#wrapper #articles{
+	width: 90%;
+	color: #783F8C;
+	background-color: #783F8C;
+	margin: 0px auto;
+}
+#wrapper #articles #article{
+	width: 31%;
+	height: 50px;
+	min-height: 400px;
+	color: #BD8CCF;
+	background-color: #BD8CCF;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	float: left;
+	
+}
+
+
+/* Стили для изображений */
+img{
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+.logo{
+	min-width: 25px;
+	min-height: 25px;
+	float: left;
+}
+.search{
+	float: left;
+	margin-left: 20px;
+	margin-top: 25px;	
+}
+.enter{
+	float: right;
+	margin-right: 40px;
+	margin-top: 25px;
+	font-size: 20px;
+}
+.registration{
+	float: right;
+	margin-right: 20px;
+	margin-top: 25px;
+	font-size: 20px;
+}
+.copyright{
+	float: left;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+.author{
+	float: right;
+	margin-right: 20px;
+	margin-top: 25px;
+}
+.tariffs{
+	background-color: #F7F7F7;
+	border-top: 2px solid silver;
+	border-bottom: 2px solid silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;
+    border-radius: 10px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+	
+}
+.tariffsTable{
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+.tariffsTable tr td form input:hover{
+	background-color: #e40009;
+	color: #FFF;
+}
+.usertable{
+     width: 70%;
+     border-collapse: collapse;
+}
+.usertable td{
+    border: 1px solid silver;
+    padding: 3px 7px 2px 7px;
+}
+.usertable th{
+    border: 1px solid silver;
+    padding: 3px 7px 2px 7px;
+    text-align: left;
+    padding: 5px;
+    background-color: #9C9C9C;
+    color: #fff;
+}
+.usertable tr:hover{
+    background-color: #DEDEDE;
+}
+.buttonNews{
+    width: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,19 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+        maxElementsInMemory="20000"
+        eternal="false"
+        timeToIdleSeconds="300"
+        timeToLiveSeconds="30000"
+        overflowToDisk="true"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="300"
+        memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="by.it.academy.pojos.News"
+           maxElementsInMemory="15000"
+           eternal="true"
+           overflowToDisk="false" />
+
+</ehcache>
