@@ -2,8 +2,13 @@ package by.it.academy.services;
 
 import by.it.academy.daoImpl.NewsDaoImpl;
 import by.it.academy.pojos.*;
+import by.it.academy.util.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by USER on 11.05.2016.
@@ -27,8 +32,7 @@ public class NewsService {
     }
 
     public void add(News news) {
-        newsDaoImpl.add(news);
-    }
+        newsDaoImpl.add(news); }
 
     public List<Integer> infoNewsesPagination(int currentPage) {
         return newsDaoImpl.infoNewsesPagination(currentPage);

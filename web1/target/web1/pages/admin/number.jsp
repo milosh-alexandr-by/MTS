@@ -22,7 +22,6 @@
     <title>First page</title>
 </head>
 <body>
-${loginCookie}
 <div id="page-wrap">
     <header>
 		<span class="logo">

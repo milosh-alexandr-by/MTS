@@ -31,7 +31,8 @@ public class Controller extends HttpServlet {
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+//        request.setCharacterEncoding("cp1251");
+        request.setCharacterEncoding("utf-8");
         String page = null;
         // определение команды, пришедшей из JSP
         ActionFactory client = new ActionFactory();

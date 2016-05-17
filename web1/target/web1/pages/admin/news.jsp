@@ -130,13 +130,6 @@
                     </c:forEach>
                 </tr>
             </table>
-
-            <br/><hr/><br/>
-
-            Количество записей: ${infoNewsesPagination.get(0)}<br/>
-            Количество страниц: ${infoNewsesPagination.get(1)}<br/>
-            Текущая страница:   ${infoNewsesPagination.get(2)}<br/>
-
         </div>
     </div>
 </div>

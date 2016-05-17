@@ -42,13 +42,14 @@ public class NewsDaoImpl implements NewsDao {
         String hql ="FROM News";
         Query query = session.createQuery(hql);
 
-        List<News> newses = query.list();
+       List<News> newses = query.list();
 
         transaction.commit();
         session.flush();
         session.close();
 
-        return newses;
+      return newses;
+
     }
 
     @Override
@@ -127,7 +128,6 @@ public class NewsDaoImpl implements NewsDao {
         transaction.commit();
         session.flush();
         session.close();
-
     }
 
 

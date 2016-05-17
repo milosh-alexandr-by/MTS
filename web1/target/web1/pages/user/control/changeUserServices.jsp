@@ -16,7 +16,7 @@
     <meta name="keywords" content="test, site, website" />
     <meta name="description" content="Это пробный сайт моего проекта" />
     <link href="/../../css/main.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="/../../images/MTS_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/../../images/ico/MTS_ico.ico">
     <title>First page</title>
 </head>
 <body>

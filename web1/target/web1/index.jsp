@@ -110,19 +110,6 @@
                     </c:forEach>
                 </tr>
             </table>
-
-            <br/><hr/><br/>
-
-            Количество записей: ${infoNewsesPagination.get(0)}<br/>
-            Количество страниц: ${infoNewsesPagination.get(1)}<br/>
-            Текущая страница:   ${infoNewsesPagination.get(2)}<br/>
-
-            <br/><br/>
-            Логин юзера из куки: ${loginCookie}
-            <br/><br/>
-            Параметр из first.jsp: ${hello}
-            <br/><br/>
-            Засетился ли куки в сессию ${httpLoginUser}
         </div>
     </div>
 </div>
